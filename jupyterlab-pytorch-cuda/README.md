@@ -6,13 +6,13 @@
 * Virtual machines and cloud images use the same components and configuration approach. 
 
 ## Get this image
-The recommended way to get this image is to pull the prebuilt image from Docker Hub.
+The recommended way to get this image is to pull the prebuilt image from [Docker Hub](https://hub.docker.com/repository/docker/ninthkat/jupyterlab-pytorch-cuda/general).
 
 ```
 docker pull ninthkat/jupyterlab-pytorch-cuda:latest
 ```
 
-To use specific version of this image, you can pull a versioned tag. You can view the list of available versions in the Docker Hub.
+To use specific version of this image, you can pull a versioned tag. You can view the [list of available versions](https://hub.docker.com/repository/docker/ninthkat/jupyterlab-pytorch-cuda/tags) in the Docker Hub.
 ```
 docker pull ninthkat/jupyterlab-pytorch-cuda:[TAG]
 ```
@@ -32,7 +32,7 @@ docker run -v /path/to/jovyan-persistence:/home/jovyan --rm --name jupyterlab-py
 ```
 
 ## Use Nvidia GPU
-For using Nvidia GPU, you need to install the NVIDIA driver and nvidia-docker on host machine. You can refer to the official documentation for more information.
+For using Nvidia GPU, you need to install the NVIDIA driver and nvidia-docker on host machine. You can refer to the [official documentation](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html) for more information.
 ```
 docker run -v /path/to/jovyan-persistence:/home/jovyan --rm --name jupyterlab-pytorch-cuda -p 8888:8888 --gpus all ninthkat/jupyterlab-pytorch-cuda:latest
 ```
