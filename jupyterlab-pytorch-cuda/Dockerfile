@@ -1,8 +1,9 @@
 FROM pytorch/pytorch:2.0.1-cuda11.7-cudnn8-devel
 
-RUN apt update && apt install git -y
+RUN apt-get update --yes && \
+    apt-get install --yes --no-install-recommends git 
 
-RUN conda install -c conda-forge -y jupyterlab
+RUN conda install -c conda-forge -y jupyterlab ipywidgets
 
 RUN useradd -ms /bin/bash jovyan
 

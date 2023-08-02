@@ -19,22 +19,22 @@ docker pull ninthkat/jupyterlab-pytorch-cuda:[TAG]
 
 If you wish, you can also build the image yourself.
 ```
-git clone https://github.com/ninthcat/containers.git
+git clone https://github.com/ninthkat/containers.git
 cd containers/jupyterlab-pytorch-cuda
 docker build . -t YOURNAME/YOUAPP:TAG
 ```
 
 ## Presistent your data
-You can mount a volume to the container to persist your data. For example, you can mount the current directory to the container's `/home/jovyan/work` directory.
+You can mount a volume to the container to persist your data. For example, you can mount the directory to the container's `/home/jovyan` directory.
 
 ```
-docker run -v /path/to/jovyan-persistence:/home/jovyan/work --rm --name jupyterlab-pytorch-cuda -p 8888:8888 ninthkat/jupyterlab-pytorch-cuda:latest
+docker run -v /path/to/jovyan-persistence:/home/jovyan --rm --name jupyterlab-pytorch-cuda -p 8888:8888 ninthkat/jupyterlab-pytorch-cuda:latest
 ```
 
 ## Use Nvidia GPU
 For using Nvidia GPU, you need to install the NVIDIA driver and nvidia-docker on host machine. You can refer to the official documentation for more information.
 ```
-docker run -v /path/to/jovyan-persistence:/home/jovyan/work --rm --name jupyterlab-pytorch-cuda -p 8888:8888 --gpus all ninthkat/jupyterlab-pytorch-cuda:latest
+docker run -v /path/to/jovyan-persistence:/home/jovyan --rm --name jupyterlab-pytorch-cuda -p 8888:8888 --gpus all ninthkat/jupyterlab-pytorch-cuda:latest
 ```
 
 ## Configuaration
