@@ -1,6 +1,6 @@
 images:
   - ninthkat/jupyterlab-pytorch-cuda
-  - registry.aliyuncs.com/ninthkat/jupyterlab-pytorch-cuda
+  - registry.cn-hangzhou.aliyuncs.com/ninthkat/jupyterlab-pytorch-cuda
 tags:
   - "latest"
   - "pytorch-2.0.1-cuda-11.8"
